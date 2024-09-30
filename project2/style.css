@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NL:wght@100..400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0; 
+    padding:0;
+    font-family: Rubik, sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    font-family:"Playwrite NL" ;
+}
+
+.navBar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.navBar ul li{
+    margin:2px 7px;
+}
+.navBar ul li a{
+    text-decoration: none; 
+    color:rgb(103, 103, 103);
+
+}
+.navBar ul li a:hover{
+    color:rgb(0, 0, 0);
+}
+
+.connexion button{
+    padding:10px 15px; 
+    border-radius: 80px;
+}
+.login{
+    border:1px solid black;
+    background-color:transparent;
+    transition: 0.4s;
+}
+.login:hover{
+    border:1px solid black;
+    background-color:black;
+    color:white;
+    cursor: pointer;
+}
+.signup{
+    border:1px solid black;
+    background-color:black;
+    color:white;
+    transition: 0.4s;
+
+}
+.signup:hover{
+    border:1px solid black;
+    background-color:transparent;
+    color: black;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 6rem;
+}
+.introduction{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.content h1{
+    font-size: 3rem;
+    margin: 0;
+
+}
+.content p{
+    font-size: 13px;
+    color: gray;
+    line-height: 1.8;
+}
+
+.content button{
+    width: 150px;
+    border-radius: 60px;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.card{
+    border-radius: 10px;
+    background-image:linear-gradient(to bottom, rgb(3, 3, 3), rgb(55, 54, 54));
+    height: 250px;
+    width: 500px;
+    color: white;
+    padding:2rem;
+    
+}
+.card p{
+    font-size: 26px;
+    margin: 0;
+}
+
+.emailInput{
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.emailInput .email, .btnEmail{
+    border:none;
+    display: block;
+    height: 60px;
+    border-radius: 10px;
+}
+.email{
+    font-size: 18px;
+    width:398px ;
+    border: none;
+}
+.email:focus{
+   outline: none;
+   border: none;
+}
+.cards{
+    margin-top: 3rem;
+}
+.btnEmail{
+    height: 50px;
+    width: 50px;
+    background-image:linear-gradient(to bottom, rgb(3, 3, 3), rgb(37, 36, 36));
+    cursor: pointer;
+}
+.card .subtitle{
+    text-align: center;
+    font-size: 14px;
+}
+.boxs{
+    display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin-left: 3rem;
+   margin-right: 3rem;
+}
+.items{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.items h2{
+    margin-left: 2rem;
+}
+.items h4{
+    margin-right: 2rem;
+}
+.box{
+    width: 260px;
+    height: 270px;
+    border-radius: 15px;
+    padding: 1.4rem;
+    
+}
+.box1{
+    background-color: rgba(32, 215, 136, 0.679);
+}
+.box2{
+    background-color: rgba(8, 8, 8, 0.909);
+    color:white;
+}
+.box3{
+    background-color: rgba(165, 49, 211, 0.638);
+}
+.box4{
+    background-color: rgba(211, 224, 36, 0.657);
+}
+
+.box .first{
+    color:rgb(93, 93, 93);
+    margin: 5px;
+    text-align: justify;
+    
+}
+.box h2{
+    margin:0;
+}
+.box hr{
+    border:1px solid rgb(93, 93, 93);
+    margin:0.2rem;
+}
+.persent{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 0;
+
+}
+.persent span{
+    font-size: 20px;
+    color:black; 
+}

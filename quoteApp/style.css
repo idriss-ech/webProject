@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=New+Rocker&display=swap');
+
+*{
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+
+   
+}
+
+body{
+    background-color: #101318;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background-color: white;
+    border-radius: 20px;
+    width: 600px;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 1px -0px 100px rgba(49, 197, 255, 0.203),
+                -1px 0px 100px rgba(66, 201, 255, 0.554) ;
+    
+}
+h1{
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 1rem;
+}
+h1::after{
+    content:''; 
+    position: absolute;
+    bottom:0px; 
+    border-radius: 5px;
+    left:50%;
+    transform:translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: rgb(0, 149, 255);
+    animation: move 1s ease-in-out infinite alternate-reverse;
+}
+@keyframes move {
+    from{
+        left:49%;
+    }
+    to{
+        
+        right: 55%;
+    }
+    
+}
+
+.quote{
+    margin:1.5rem 0 0.5rem;
+    font-family: "Gideon Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: lighter;
+    color: rgb(14, 14, 14);
+}
+.author{
+    text-align: right;
+    padding-right: 1rem;
+    font-family: "Gideon Roman", serif;
+    font-weight: 800;
+    font-style:italic;
+    font-size: 16px;
+    font-weight: lighter;
+    color: rgb(1, 119, 202);
+}
+
+.btn{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top:1rem; 
+}
+button{
+    padding: 8px 20px;
+    width: 130px;
+    font-size: medium;
+    text-align: center;
+    border:1.5px solid rgb(27, 156, 249);
+    border-radius: 50px;
+    cursor:pointer;
+    font-family: "Gideon Roman", serif;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 8px
+}
+svg{
+    margin:0 5px;
+}
+button:hover{
+    transform:scale(1.02);
+}
+
+.new{
+    background-color:rgb(27, 156, 249) ;
+    color: white;
+}
+.visit{
+    background: white;
+    color:rgb(27, 156, 249) ;
+   
+}
+
+@media (max-width:640px) {
+    .container{
+        width:490px
+    }
+}
+

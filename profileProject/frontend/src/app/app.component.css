@@ -1,0 +1,28 @@
+.container{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 700px;
+    width: 1300px;
+}
+
+.leftSide, .rightSide{
+    height: 100%;
+}
+.leftSide{
+    width: 60%;
+    background-image: url('../assets/images/signin.png');
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat ;
+}
+
+.rightSide{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

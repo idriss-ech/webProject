@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #101318;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    width: 90vw;
+    align-content: center;
+}
+.container div{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-size: 80px;
+    font-family: helvetica;
+    height: 80px;
+    font-weight: 900;
+
+    
+}
+span{
+    margin-left:5px;
+    padding: 0;
+}
+.icon{
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+
+.like, #number1 {
+    color:rgb(255, 52, 52);
+}
+.comment,#number2 {
+    color:rgb(52, 255, 160);
+}
+.save ,#number3{
+    color:rgb(52, 194, 255);
+}

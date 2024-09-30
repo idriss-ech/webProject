@@ -1,0 +1,403 @@
+:root{
+    --blue1:rgb(3, 74, 136);
+    --blue2:rgb(21, 121, 216);
+    --white1:#fff;
+    --white2:#ffffffd0;
+    --white3:#ffffff30;
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height:100vh;
+}
+.custom-shape-divider-bottom-1721819685 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1721819685 svg {
+    position: relative;
+    display: block;
+    width: calc(135% + 1.3px);
+    height: 69px;
+}
+
+.custom-shape-divider-bottom-1721819685 .shape-fill {
+    fill: var(--white1);
+}
+header{
+    background: linear-gradient(to bottom right, rgb(3, 74, 136), rgb(21, 121, 216));
+    min-width: 100vw;
+
+}
+.container{
+    height: 70vh;
+    position: relative;
+}
+
+.header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 2rem; 
+    color: white;
+}
+.logo{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.menuList{
+    display: flex;
+    list-style: none;
+    font-weight: lighter;
+    justify-content: center;
+}
+.menuList .item{
+    padding-left: 1rem;
+}
+
+button{
+    padding:5px 10px; 
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: transparent;
+}
+.icon{
+    width: 35px;
+    height: 35px;
+    border-radius:100% ;
+    padding: 6px;
+    color: var(--white1);
+}
+.icon:hover{
+    background: var(--white3);
+}
+.registration button{
+    background: transparent;
+    border:2px solid var(--white1);
+    color: var(--white1);
+    position: relative;
+    z-index: 0;
+}
+
+.registration button::after{
+    content:'';
+    height:100%;
+    width: 0%;
+    position: absolute;
+    background: var(--white2);
+    left:0;
+    top:0;
+    transition: 0.3s;
+}
+
+.registration button:hover::after{
+    width: 100%;
+    z-index: -1;
+}
+.registration button:hover{
+    color:var(--blue1)
+}
+
+.introduction{
+    position:absolute;
+    top:50%; 
+    left:50%; 
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin:2rem 0;
+    
+
+}
+
+
+.introduction h1{
+    color:var(--white1);
+    font-size: 3.5rem;
+    padding:0 5px;
+    overflow:hidden;
+    white-space: nowrap;
+    border-right:8px solid var(--white1);
+    width: 500px;
+    animation: typing 3s ;
+    
+
+}
+
+@keyframes typing {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+    
+}
+.introduction p{
+    color:var(--white2);
+    font-weight: lighter;
+    text-align: center;
+    margin:1rem 0;
+}
+
+.introduction button{
+    padding:10px 20px;
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+    width: 250px;
+    display: block;
+    background-color: var(--white1);
+    color:var(--blue1);
+    transition: 0.4s;
+}
+.introduction button:hover{
+    background: transparent;
+    color: var(--white1);
+    border:2px solid var(--white1);
+}
+
+
+@media (max-width:640px){
+    .introduction h1{
+        font-size: 1.5rem;
+    }
+    .introduction p{
+        font-size: 14px;
+    }
+    .menu, .registration{
+        display: none;
+    }
+   
+}
+
+@media (min-width:640px){
+    .dropdown{
+        display: none;
+    }
+}
+
+/*bg*/
+/*txt*/
+/*success*/
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .buttons button {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin: 20px;
+    color: #568fa6;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+  }
+  
+  .buttons button:before, .buttons button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #44d8a4;
+    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .buttons button:before {
+    right: 0;
+    top: 0;
+    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .buttons button:after {
+    left: 0;
+    bottom: 0;
+  }
+  
+  .buttons button span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+  
+  .buttons button span:before, .buttons button span:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: #44d8a4;
+    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .buttons button span:before {
+    right: 0;
+    top: 0;
+    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+  }
+  
+  .buttons button span:after {
+    left: 0;
+    bottom: 0;
+  }
+  
+  .buttons button p {
+    padding: 0;
+    margin: 0;
+    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .buttons button p:before, .buttons button p:after {
+    position: absolute;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+    z-index: 1;
+    left: 0;
+  }
+  
+  .buttons button p:before {
+    content: attr(data-title);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .buttons button p:after {
+    content: attr(data-text);
+    top: 150%;
+    color: #44d8a4;
+  }
+  
+  .buttons button:hover:before, .buttons button:hover:after {
+    width: 100%;
+  }
+  
+  .buttons button:hover span {
+    z-index: 1;
+  }
+  
+  .buttons button:hover span:before, .buttons button:hover span:after {
+    height: 100%;
+  }
+  
+  .buttons button:hover p:before {
+    top: -50%;
+    transform: rotate(5deg);
+  }
+  
+  .buttons button:hover p:after {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .buttons button.start {
+    background-color: #44d8a4;
+    box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+  }
+  
+  .buttons button.start p:before {
+    top: -50%;
+    transform: rotate(5deg);
+  }
+  
+  .buttons button.start p:after {
+    color: white;
+    transition: all 0s ease;
+    content: attr(data-start);
+    top: 50%;
+    transform: translateY(-50%);
+    animation: start 0.3s ease;
+    animation-fill-mode: forwards;
+  }
+ .boxs{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+ }
+  .box{
+    width: 250px;
+    height: 300px;
+    background: #275ede;
+  }
+
+.box2{
+    background: green;
+
+}
+  .slide-top.in-view {
+    background: red;
+	-webkit-animation: slide-top 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+  
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-7-26 22:0:23
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+  }
+  

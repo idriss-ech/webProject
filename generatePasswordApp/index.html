@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generate Password</title>
+    <style>
+        .box{
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 5px;
+            padding:5px 10px;
+            position: absolute;
+            right: 0px;
+            bottom:-35px;
+            display: none;
+
+        }
+    
+        #message{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <h1>Generate a <br> <span>Random Password</span></h1>
+        <div class="inputfield" style="position: relative;">
+            <input id="password" readonly type="text" placeholder="generated password">
+            <button onclick="copy()"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"><g fill="none" stroke="#059669" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></g></svg></button>
+            <div class="box">
+                <span id="message">copied</span>
+            </div>
+        </div>
+        <button id='generateBtn' class="generate">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4.5H5.5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V11"/><path d="M17.5 3.467a1.462 1.462 0 0 1-.017 2.05L10.5 12.5l-3 1l1-3l6.987-7.046a1.409 1.409 0 0 1 1.885-.104zm-2 2.033l.953 1"/></g></svg>
+            Generate
+        </button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

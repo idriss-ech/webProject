@@ -1,0 +1,20 @@
+.header{
+    height: 80vh;
+    background-image: url('../../assets/bj3.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.prBox{
+    height: 26rem;
+}
+.box:hover .collectionImg{
+  transform: scale(1.2);
+}
+
+.box:hover .collectionBtn{
+    background-color: white;
+    color:black;
+}

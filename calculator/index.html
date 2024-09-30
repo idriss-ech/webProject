@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a9ec473b0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+    </div>
+        <div class="container">
+                <p id="result"></p>
+            <div class="btns">
+                <button onclick="clearResult();" value = "AC">AC</button>
+                <button onclick="deleteDE();"  value = "DE">DE</button>
+                <button class="item" value = ".">.</button>
+                <button class="item" value = "/">/</button>
+                <button class="item" value = "7">7</button>
+                <button class="item" value = "8">8</button>
+                <button class="item" value = "9">9</button>
+                <button class="item" value = "*">*</button>
+                <button class="item" value = "4">4</button>
+                <button class="item" value = "5">5</button>
+                <button class="item" value = "6">6</button>
+                <button class="item" value = "-">-</button>
+                <button class="item" value = "1">1</button>
+                <button class="item" value = "2">2</button>
+                <button class="item" value = "3">3</button>
+                <button class="item" value = "+">+</button>
+                <button class="item" value = "00">00</button>
+                <button class="item" value = "0">0</button>
+                <button onclick="calculate()" class="itemEqual"  value="=">=</button>
+            </div>
+        </div>
+
+        <script>
+            const btns = document.querySelectorAll('.item');
+            const result = document.getElementById('result');
+            btns.forEach((btn)=>{
+                btn.addEventListener('click',()=>{
+                    let input = btn.value;
+                    if(input === '*' || input === '+' ||input === '-' ||input === '/' )
+                            result.textContent = result.textContent+" "+input+" ";
+                    else{
+                        result.textContent = result.textContent+btn.value;
+                    }
+                })
+            })
+            function clearResult(){
+                result.textContent = '';
+            }
+            function deleteDE(){
+                result.textContent = result.textContent.slice(0,-1)
+            }
+            function calculate(){                
+                result.textContent = eval(result.textContent);
+            }
+        </script>
+  </body>
+</html>

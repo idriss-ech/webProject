@@ -1,0 +1,36 @@
+.add{
+    width: 80vw;
+    margin-inline:auto;
+    padding: 1rem;
+
+}
+
+.add form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.lb img {
+    width: 120px;
+    background: #000;
+}
+
+.imageName{
+    font-weight: 300;
+    font-size: 12px;
+}
+.add form button{
+    background-color: var(--orange1);
+    font-weight: 600;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+@media (width < 500px) {
+    .add{
+        width: 100vw;
+    }
+}

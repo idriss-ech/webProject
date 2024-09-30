@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Document</title>
+   <style>
+        body{
+            background: #101418;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+        .container{
+            background: white;
+            width:90%;
+            border-radius: 20px;
+        }
+        .inner{
+            border-radius: 20px;
+            
+            padding: 1em;
+            background: #feef22;
+            clip-path:circle(10% at 0% 0%); 
+            transition:all 0.3s ease-in-out
+        }
+        .container:hover .inner{
+            clip-path: circle(74%);
+        }
+        .inner h1{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .inner p{
+            color:#333;
+            font-weight: lighter;
+        }
+        .inner button{
+            padding:5px 15px; 
+            margin-top: 13px;
+            background: #000;
+            color:white;
+        }
+   </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="inner">
+            <h1>Testing</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officia sequi hic iusto soluta </p>
+            <button>Descover</button>
+        </div>
+    </div>
+
+</body>
+</html>

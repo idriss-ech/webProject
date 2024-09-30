@@ -1,0 +1,261 @@
+.container{
+    display: flex;
+    width: 100vw;
+}
+.leftSide, .rightSide{
+    margin:0;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.leftSide{
+    background: linear-gradient(to bottom, var(--black1),var(--black2));
+}
+.leftSide img{
+    width: 80px;
+    height: 80px;
+}
+.leftSide h1{
+    color:var(--white1);
+    font-size: 60px;
+}
+.leftSide .logo{
+    background: linear-gradient(to right, var(--orange1), var(--orange2));
+    background-clip: text;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rightSide form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 90%;
+  margin-bottom: 3rem;
+}
+.rightSide h2{
+    font-size: 50px;
+    margin-bottom:4rem;
+}
+
+
+.rightSide div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.rightSide form input{
+    background-color: var(--white2);
+    border-radius: 10px;
+    width: 450px;
+    padding:14px 15px;
+    border:none; 
+    outline:none;
+   margin:5px 0 ; 
+
+}
+.rightSide form label{
+    color: var(--gray);
+    padding-bottom: 4px;
+}
+
+.rightSide form input[type='submit']{
+    background-color: var(--black2);
+    color:white; 
+    padding:10px 20px;
+    border: 1px solid var(--black2);
+    margin-top:2rem;
+    font-size: 15px;
+}
+
+.rightSide form input[type='submit']:hover{
+    background-color: var(--black1);
+    cursor: pointer;
+
+}
+
+.sub{
+    color:var(--orange2);
+}
+
+.rightSide a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.addForm{
+    display: flex;
+}
+.addForm div{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    margin:0 5px;
+}
+.addForm input{
+    margin:8px 0;
+    border-radius: 8px;
+    padding: 8px 7px;
+    border:none; 
+    outline: none;
+    background-color: var(--white2);
+
+}
+.addForm select{
+    margin:8px 0;
+    border-radius: 8px;
+    padding: 8px 7px;
+    border:none; 
+    outline: none;
+    background-color: var(--white2);
+
+}
+
+.addForm textarea{
+    max-height: 100px;
+    min-height: 100px;
+    max-width: 100%;
+    min-width: 100%;
+    background-color: var(--white2);
+    border:none;
+    border-radius: 8px;
+    padding:8px 7px;
+}
+.addForm button{
+    background-color: var(--black1);
+    color:var(--white1);
+    font-size: 16px;
+}
+
+.boxs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white2);
+    border-radius: 8px;
+    border:1px dashed var(--gray); 
+    transition: 0.5 ease-in-out;
+    margin-bottom: 0.5rem;
+}
+.box:hover{
+  transform: scale(1.01);
+  cursor: pointer;
+}
+.box .infos{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 1rem;
+}
+.box .infos .title{
+    font-weight: 500;
+}
+.box .infos span{
+    font: weight 300px;
+    display: inline-block;
+    padding:0.5rem;
+}
+.details{
+    background-color: var(--green1);
+    color:white;
+}
+.delete{
+    background-color: var(--red1);
+    color:white;
+}
+.errorMsg, .successMsg{
+    font-size: 13px;
+}
+.errorMsg{
+    color:var(--red1);
+}
+.successMsg, .errMsg{
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin:1rem;
+    color:white;
+    text-align: center;
+}
+.successMsg{
+    background-color:var(--green1);
+}
+.errMsg{
+    background-color:var(--red1);
+ 
+}
+
+.modal{
+    margin:auto;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -20%);
+    position: absolute;
+    background: var(--white2);
+    border-radius: 20px;
+    padding:1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+}
+
+.modal  div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0.3rem 0;
+}
+.modal button{
+    background-color: var(--orange1);
+    margin-top: 1rem;
+}
+.modal span{
+    display: block;
+}
+.content{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 200px;
+}
+
+@media(max-width:900px){
+    .container{
+        flex-direction: column;
+    }
+    .leftSide, .rightSide{
+        width: 100vw;
+    }
+    .leftSide{
+        padding: 2rem 0;
+        height: 250px;
+        width: 100vw;
+        border-bottom-right-radius: 200px;
+        border-bottom-left-radius: 200px;
+
+    }
+    .rightSide{
+        padding-top: 2rem;
+        justify-content: start;
+    }
+}
+
+
+@media (max-width:600px) {
+    .addForm{
+        flex-direction: column;
+    }
+
+    
+}

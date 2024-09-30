@@ -1,0 +1,134 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+h1{
+    font-size: 40px;
+    color:rgb(0, 128, 70);
+}
+p{
+    font-weight: 300;
+    color: rgb(96, 96, 96);
+    margin: 1rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.inputData{
+    width: 300px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(218, 254, 218, 0.616);
+    margin:10px 0;
+    border-radius: 10px;
+}
+.inputData input{
+    width: 250px;
+    padding: 5px 3px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.inputData span i{
+    color:rgb(0, 75, 0);
+}
+.forgetpw a{
+    color:rgb(125, 125, 125);
+    text-align: right;
+    transition: 0.3s ease-in;
+}
+.forgetpw a:hover{
+    color:rgb(75, 75, 75);
+}
+.forgetpw a{
+    text-decoration: none;
+    color:rgb(125, 125, 125);
+    text-align: right;
+}
+.forgetpw{
+    display: flex;
+    width: 300px;
+    justify-content: end;
+    padding-right: 4px;
+    margin:0;
+}
+
+form input[type='submit']{
+    background-color: rgb(28, 192, 121);
+    border:none;
+    width: 300px;
+    margin-top: 2rem ;
+    transition:0.3s ease-in-out;
+}
+form input[type='submit']:hover{
+    background-color: rgb(20, 140, 88);
+    cursor:pointer;
+    
+}
+
+.signin{
+    margin-top:2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin .title{
+    color:rgb(2, 110, 60);
+    font-weight: 400;
+}
+
+.socialMedia{
+    margin:1rem 0;
+    display: flex;
+
+}
+.socialMedia a{ 
+    margin:0 10px;
+    width:40px;
+    height: 40px;
+    border-radius: 100%;
+    margin:2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.google{
+    border:1px solid red;
+}
+.facebook{
+    border:1px solid rgb(0, 162, 255);
+}
+.google:hover{
+    background-color: rgba(248, 139, 139, 0.682);
+    border:none;
+}
+.facebook:hover{
+    background-color: rgba(152, 220, 252, 0.689);
+    border:none;
+}
+
+
+.socialMedia a i{ 
+    margin:0 5px;
+}
+.socialMedia a .fa-google{ 
+    color:rgb(242, 0, 0);
+}
+.socialMedia a .fa-facebook{ 
+    color:rgb(0, 139, 203);
+}

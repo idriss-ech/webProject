@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NL:wght@100..400&display=swap');
+
+*{
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Rubik, sans-serif;
+    display: flex;
+    color: #001d3d;
+}
+nav{
+    background-color: white;
+    width: 80px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:2rem 2rem;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo span{
+  padding:4px 0px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.logo .logoHalf1{
+    color:rgb(228, 149, 3);
+}
+main{
+    background-color: rgb(241, 241, 241);
+    flex-grow: 1;
+}
+i{
+    color: #001d3d;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:4rem;
+}
+.navbar ul{
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 14px 2px;
+    padding: 7px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+.navbar ul li:hover {
+    background-color: #001d3d;
+}
+.navbar ul li:hover a {
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.navbar ul li:hover a i {
+    color: white;
+}
+
+main .header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    margin: 2rem 3rem;
+}
+.search{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: white;
+    width: 210px;
+    border-radius: 80px;
+}
+.search input{
+    outline: none;
+    border: none;
+    padding: 4px 8px;
+}
+
+.header span{
+    margin-right:  10px;
+    margin-left:  10px;
+}
+
+.user{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.user .icon{
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 36px; 
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user .icon1:hover i{
+    color:white;
+}
+.user .icon2:hover i{
+    color:#001d3d;
+}
+.user .icon1:hover{
+    background-color: rgb(241, 43, 43);
+}
+.user .icon2:hover{
+    background-color: rgb(241, 218, 43);
+}
+.account{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 10px;
+}
+.account img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.account .email{
+    color:gray;
+    font-size: 13px;
+}
+
+.body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.body .leftSection, .rightSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.5rem;
+}
+.leftSection{
+    flex-grow: 4;
+}
+.rightSection{
+    flex-grow: 1;
+}
+.container{
+    width:100%;
+    display: flex;
+}
+.container1{
+    height: 18rem;
+}
+.container2{
+    height: 20rem;
+}
+.box1{
+    width: 30%;
+}
+.box2{
+    width: 70%;
+}
+.box3{
+    width: 100%;
+}
+.box4,.box5{
+    width: 110%;
+    height: 18rem;
+}
+
+
+.body .box{
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+h4{
+    font-size: 14px;
+    font-weight: 400;
+    margin:7px 2px;
+}
+.content {
+    border-radius: 10px;
+    width: 100%;
+    height: 85%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("images/n1.avif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.content .timing{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.timing span{
+    padding: 3px 4px; 
+    border-radius: 8px;
+    background-color: white;
+    font-size: 10px;
+
+}
+.actor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.actorName{
+    text-align: left;
+}
+.title{
+    color:white;
+    font-size: 17px;
+    font-weight: 300;
+}
+.subTitle{
+    color:white;
+    font-size: 14px;
+    font-weight: 300;
+}
+.play{
+    background-color: rgba(255, 255, 255, 0.896);
+    border-radius: 100px;
+    width: 36px;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9ec473b0b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Password</title>
+</head>
+<body>
+    <div>
+        <input id="passwdInput" type="password" placeholder="password">
+        <img onclick="passwd()" id="image" src="./hidden.png" alt="">
+    </div>
+    <script>
+        const pwd = document.getElementById('passwdInput')
+        const img = document.getElementById('image')
+        function passwd(){
+            console.log('click')
+            if(pwd.type === 'text'){
+                pwd.type = 'password'
+                img.src = './hidden.png'
+            } 
+            else{
+                pwd.type = 'text'
+                img.src = './eye.png'
+            } 
+        }
+    </script>
+</body>
+</html>

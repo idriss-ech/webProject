@@ -1,0 +1,36 @@
+<div class="signup">
+    <h1>Create Your Account</h1>
+    <br>
+    <form (ngSubmit)="signIn();">
+        <div class="column">
+            <div class="inputData">
+                <input type="text" id="firstname" name="firstname" placeholder="firstname" required [(ngModel)]="account.firstname">
+                    <span><i class="fa-solid fa-pen"></i></span>
+            </div>
+            <div class="inputData">
+                <input type="lastname" id="lastname" name="lastname" placeholder="lastname" required [(ngModel)]="account.lastname" minlength="8">
+                <span><i class="fa-solid fa-pen"></i></span>
+            </div>
+        </div>
+            <div class="inputData inputDataDown">
+                <input type="email" id="username" name="email" placeholder="username" required [(ngModel)]="account.email">
+                    <span><i class="fa-solid fa-user"></i></span>
+            </div>
+            <div class="inputData inputDataDown">
+                <input type="password" id="password"  autocomplete="current-password" name="password" placeholder="password" required [(ngModel)]="account.password" minlength="8">
+                <span><i class="fa-solid fa-lock"></i></span>
+            </div>
+           
+   
+      <input type="submit" class="btn" value="Create">
+    </form>
+ 
+    <div class="signin">
+           <span>Already Have an Account ? <a routerLink="/login" class="title">Log in</a></span>
+    </div>
+
+    <div class="messageBox" *ngIf="showMessageBox" [ngStyle]="{'background-color':messageBg}">
+        <span>{{message}}</span>
+    </div>
+ 
+ </div>

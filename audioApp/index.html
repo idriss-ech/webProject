@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a9ec473b0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Music App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <i class="circle fa-solid fa-chevron-left"></i>
+        <i class="circle fa-solid fa-bars"></i>
+      </div>
+      <div class="body" id="theBody">
+        <img id="songImg" src="" alt="" />
+        <div class="infos">
+          <p class="title" id="songTitle">Despacito</p>
+          <p class="actor" id="songActor">Luis Fonsi Ft. Puerto Rican</p>
+        </div>
+      </div>
+      <div class="footer">
+        <audio controls id="song" style="display: none">
+          <source id="songSrc" src="" type="audio/mpeg" />
+        </audio>
+        <input type="range" value="0" name="range" id="range" />
+        <div class="controls">
+          <div onclick="backward()"><i class="fa-solid fa-backward"></i></div>
+          <div onclick="pausePlay()">
+            <i id="ctrl" class="fa-solid fa-play"></i>
+          </div>
+          <div onclick="forward()"><i class="fa-solid fa-forward"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const music = [
+        {
+          name: "Despacito",
+          actor: "Luis Fonsi Ft. Puerto Rican",
+          img: "https://img.freepik.com/photos-gratuite/cle-sol-creative-signe-isole-ia-generative_169016-29569.jpg",
+          src: "https://serv2.bregaraab.com/songs_2021/bregaraab.Com_mnwaat_dsbasytw_-_Luis_Fonsi_-_Despacito.mp3",
+        },
+        {
+          name: "Maher Zin",
+          actor: " one",
+          img: "https://static6.depositphotos.com/1001599/569/i/950/depositphotos_5691496-stock-photo-treble-clef.jpg",
+          src: "https://serv10.ahmedwap.com/songs_2021/Ahmedwap.Com_mahr_zyn_The_Power.mp3",
+        },
+        {
+          name: "Maher Zin",
+          actor: "Salam Alah",
+          img: "https://t4.ftcdn.net/jpg/03/31/83/05/360_F_331830515_CVeMxf9lXDSFOtiVD50wJCcPdnelK3ZM.jpg",
+          src: "https://serv10.ahmedwap.com/songs_2021/Ahmedwap.Com_mahr_zyn_allh_ya_mwlana.mp3",
+        },
+      ];
+
+      let songIndex = 0;
+
+      let progress = document.getElementById("range");
+      let song = document.getElementById("song");
+      let ctrl = document.getElementById("ctrl");
+      let songImg = document.getElementById("songImg");
+      let songTitle = document.getElementById("songTitle");
+      let songActor = document.getElementById("songActor");
+      let songSrc = document.getElementById("songSrc");
+      let theBody = document.getElementById("theBody");
+      songImg.src = music[0].img;
+      songTitle.textContent = music[0].name;
+      songActor.textContent = music[0].actor;
+      songSrc.src = music[0].src;
+      song.onloadedmetadata = () => {
+        progress.max = song.duration;
+        progress.value = song.currentTime;
+      };
+      function pausePlay() {
+        if (ctrl.classList.contains("fa-pause")) {
+          song.pause();
+          ctrl.classList.remove("fa-pause");
+          ctrl.classList.add("fa-play");
+        } else {
+          song.play();
+          ctrl.classList.remove("fa-play");
+          ctrl.classList.add("fa-pause");
+        }
+      }
+      if (song.play) {
+        setInterval(() => {
+          progress.value = song.currentTime;
+        }, 500);
+      }
+      progress.onchange = () => {
+        song.play();
+        song.currentTime = progress.value;
+        ctrl.classList.remove("fa-play");
+        ctrl.classList.add("fa-pause");
+      };
+
+      function forward() {
+        if (songIndex < music.length - 1) {
+            theBody.classList.add("moveLeft");
+          setTimeout(() => {
+            theBody.classList.remove("moveLeft");
+          }, 500);
+          songIndex++;
+          loadSong(songIndex);
+        }
+      }
+      function backward() {
+        if (songIndex > 0) {
+            theBody.classList.add("moveRight");
+          setTimeout(() => {
+            theBody.classList.remove("moveRight");
+          }, 500);          songIndex--;
+          loadSong(songIndex);
+        }
+      }
+      function loadSong(index) {
+        console.log("load music ", index);
+        songImg.src = music[index].img;
+        songTitle.textContent = music[index].name;
+        songActor.textContent = music[index].actor;
+        songSrc.src = music[index].src;
+        song.pause();
+        song.load();
+        song.play();
+        ctrl.classList.remove("fa-play");
+        ctrl.classList.add("fa-pause");
+      }
+    </script>
+  </body>
+</html>

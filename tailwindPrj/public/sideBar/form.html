@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Document</title>
+</head>
+<body class="bg-gradient-to-br from-blue-500 to-blue-900 h-screen flex justify-center items-center">
+    <div class="bg-white rounded-lg mx-2 my-2 px-4 py-6 w-96">
+        <form action="">
+            <h1 class="text-center font-bold text-blue-600 text-4xl pb-3">Sign Up</h1>
+            <div class="border-2 border-gray-400 relative rounded-md px-2 py-2 my-5 transition ease-in duration-300 hover:border-blue-600">
+                <label for="firstname" class="absolute -top-4 text-blue-600 font-semibold bg-white px-1">firstname</label>
+                <input class="bg-transparent border-none outline-none w-full px-2 py-1 rounded-md placeholder-gray-500" type="text" name="firstname" id="firstname" required placeholder="firstname">
+            </div>
+            <div class="border-2 border-gray-400 relative rounded-md px-2 py-2 transition ease-in duration-300 hover:border-blue-600">
+                <label for="lastname" class="absolute -top-4 text-blue-600 font-semibold bg-white px-1">lastname</label>
+                <input class="bg-transparent border-none outline-none w-full px-2 py-1 rounded-md placeholder-gray-500" type="text" name="lastname" id="lastname" required placeholder="lastname">
+            </div>
+            <div class="border-2 border-gray-400 relative rounded-md px-2 py-2 my-5 transition ease-in duration-300 hover:border-blue-600">
+                <label for="sexe" class="absolute -top-4 text-blue-600 font-semibold bg-white px-1">sexe</label>
+                <select name="sexe" id="sexe" required placeholder="sexe" class="bg-transparent border-none outline-none w-full px-2 py-1 rounded-md placeholder-gray-500">
+                    <option value="">sexe</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="border-2 border-gray-400 relative rounded-md px-2 py-2 my-5 transition ease-in duration-300 hover:border-blue-600">
+                <label for="email" class="absolute -top-4 text-blue-600 font-semibold bg-white px-1">email</label>
+                <input class="bg-transparent border-none outline-none w-full px-2 py-1 rounded-md placeholder-gray-500" type="email" name="email" id="email" required placeholder="email">
+            </div>
+           
+            <div class="border-2 border-gray-400 relative rounded-md px-2 py-2 transition ease-in duration-300 hover:border-blue-600">
+                <label for="password" class="absolute -top-4 text-blue-600 font-semibold bg-white px-1">password</label>
+                <input class="bg-transparent border-none outline-none w-full px-2 py-1 rounded-md placeholder-gray-500" type="password" name="password" id="password" required placeholder="password">
+            </div>
+            <div class="border-2 border-gray-400 relative rounded-md px-2 py-2 my-5 transition ease-in duration-300 hover:border-blue-600">
+                <label for="confirm password" class="absolute -top-4 text-blue-600 font-semibold bg-white px-1">confirm password</label>
+                <input class="bg-transparent border-none outline-none w-full px-2 py-1 rounded-md placeholder-gray-500" type="password" name="confirm password" id="confirm password" required placeholder="confirm password">
+            </div>
+
+            <button class="rounded-md px-2 py-2 mt-5 bg-blue-600 text-white text-lg w-full transition ease-in duration-300 hover:bg-blue-500">
+                Submit
+            </button>
+           
+
+        </form>
+    </div>
+</body>
+</html>

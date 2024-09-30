@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./fivicon.svg" type="image/x-icon">
+    <title>WeatherApp</title>
+    <style>
+        .loading-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba( 255, 255, 255, 0 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 5px );
+            -webkit-backdrop-filter: blur( 5px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .hidden {
+            display: none;
+        }
+        
+        .loader {
+            border: 2px solid #f3f3f3;
+            border-top: 3px solid rgb(22, 173, 80);
+            
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            display: inline;
+            position: absolute;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading" class="loading-container hidden">
+        <div class="loader"></div>
+        <div class="loader loader2"></div>
+    </div>
+    <div  class=" alertBox box hidden">
+        <div class="alert">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path fill="#dc2626" d="M11.53 2.3A1.85 1.85 0 0 0 10 1.21A1.85 1.85 0 0 0 8.48 2.3L.36 16.36C-.48 17.81.21 19 1.88 19h16.24c1.67 0 2.36-1.19 1.52-2.64zM11 16H9v-2h2zm0-4H9V6h2z"/></svg>
+                <span class="message">Attention</span>
+            </span>
+            <p class="msg"></p>
+            <button id="cancelBtn">Cancel</button>
+            
+        </div>
+        
+    </div>
+    <h1> Weather App</h1>
+    <div class="container">
+        <div class="search">
+            <input type="text" id="serachCity" required placeholder="enter the city name">
+            <button type="submit" onclick="getWeather()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#000000" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"/></svg>
+            </button>
+        </div>
+        <div class="weather">
+            <span class="state" id="weatherState">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 28 28"><path fill="#eab308" d="M14 2a.75.75 0 0 1 .75.75v1.496a.75.75 0 0 1-1.5 0V2.75A.75.75 0 0 1 14 2m0 18a6 6 0 1 0 0-12a6 6 0 0 0 0 12m0-1.5a4.5 4.5 0 1 1 0-9a4.5 4.5 0 0 1 0 9m11.25-3.75a.75.75 0 0 0 0-1.5h-1.496a.75.75 0 0 0 0 1.5zM14 23.004a.75.75 0 0 1 .75.75v1.496a.75.75 0 0 1-1.5 0v-1.496a.75.75 0 0 1 .75-.75M4.25 14.75a.75.75 0 0 0 0-1.5H2.751a.75.75 0 0 0 0 1.5zm.97-9.531a.75.75 0 0 1 1.06 0l1.5 1.5a.75.75 0 0 1-1.06 1.06l-1.5-1.5a.75.75 0 0 1 0-1.06m1.06 17.56a.75.75 0 0 1-1.06-1.06l1.5-1.5a.75.75 0 0 1 1.06 1.06zm16.5-17.56a.75.75 0 0 0-1.06 0l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5a.75.75 0 0 0 0-1.06M21.72 22.78a.75.75 0 0 0 1.06-1.06l-1.5-1.5a.75.75 0 0 0-1.06 1.06z"/></svg>
+            </span>
+            <span class="temp" ><span id="temperature">23</span> °C</span>
+            <span class="desc" id="description">Clear</span>
+            <span class="city" id="city">Paris</span>
+        </div>
+        <div class="infos">
+            <div class="humidity">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48"><path fill="#45413c" d="M9.64 45.13a14.36 1.87 0 1 0 28.72 0a14.36 1.87 0 1 0-28.72 0" opacity=".15"/><path fill="#4aeff7" d="M28.27 23.17s8.56-1.43 12.07 2.26s.08 8.68-3.79 8.39S31 29 30.31 26.79a11 11 0 0 0-2.04-3.62"/><path fill="#00dfeb" d="M36.55 30.91c-3.87-.28-5.52-4.86-6.24-7A9.39 9.39 0 0 0 30 23c-1 .08-1.7.19-1.7.19a11 11 0 0 1 2 3.62c.72 2.18 2.37 6.75 6.24 7a5 5 0 0 0 5-6.42a5.1 5.1 0 0 1-4.99 3.52"/><path fill="none" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" d="M28.27 23.17s8.56-1.43 12.07 2.26s.08 8.68-3.79 8.39S31 29 30.31 26.79a11 11 0 0 0-2.04-3.62"/><path fill="#4aeff7" d="M8 21.14S20.37 22.51 23.77 29s-3.28 12-8.5 10.09s-5.7-8.85-5.85-12.13A15.73 15.73 0 0 0 8 21.14"/><path fill="#00dfeb" d="M24.44 30.62a7.53 7.53 0 0 1-9.61 5.25c-2.91-1.06-4.42-3.63-5.21-6.3c.4 3.48 1.6 8 5.65 9.49C20 40.79 26 36.33 24.44 30.62"/><path fill="none" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" d="M8 21.14S20.37 22.51 23.77 29s-3.28 12-8.5 10.09s-5.7-8.85-5.85-12.13A15.73 15.73 0 0 0 8 21.14"/><path fill="#4aeff7" d="M6.2 11.28s8.13-7.75 17.35-6.83c7.23.73 9 8.06 4.29 11.91c-4.28 3.49-10.91.56-13.66-1.2a66.21 66.21 0 0 0-7.98-3.88"/><path fill="#00dfeb" d="M27.84 13.08c-4.28 3.49-10.91.56-13.66-1.2a47.34 47.34 0 0 0-5.32-2.73a25.44 25.44 0 0 0-2.66 2.13a66.21 66.21 0 0 1 8 3.88c2.75 1.76 9.38 4.69 13.66 1.2a6.63 6.63 0 0 0 2.4-6.9a7 7 0 0 1-2.42 3.62"/><path fill="none" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" d="M6.2 11.28s8.13-7.75 17.35-6.83c7.23.73 9 8.06 4.29 11.91c-4.28 3.49-10.91.56-13.66-1.2a66.21 66.21 0 0 0-7.98-3.88"/><path fill="#a6fbff" d="M22.97 8.442a3.28 1.17 4.14 1 0 .17-2.334a3.28 1.17 4.14 1 0-.17 2.334m13.766 17.711a2.15.77 23.32 1 0 .61-1.414a2.15.77 23.32 1 0-.61 1.414M17.79 27.475a3.03 1.08 29.7 1 0 1.07-1.876a3.03 1.08 29.7 1 0-1.07 1.876"/></svg>
+                </div>
+                <span class="content">
+                    <span><span id="humidity" >32</span> %</span>
+                    <span class="desc" style="display: block; " >Humidity</span>
+                </span>
+            </div>
+            <div class="wind-speed">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 256 256"><path fill="#00ccff" d="M184 184a32 32 0 0 1-32 32c-13.7 0-26.95-8.93-31.5-21.22a8 8 0 0 1 15-5.56C137.74 195.27 145 200 152 200a16 16 0 0 0 0-32H40a8 8 0 0 1 0-16h112a32 32 0 0 1 32 32m-64-80a32 32 0 0 0 0-64c-13.7 0-26.95 8.93-31.5 21.22a8 8 0 0 0 15 5.56C105.74 60.73 113 56 120 56a16 16 0 0 1 0 32H24a8 8 0 0 0 0 16Zm88-32c-13.7 0-26.95 8.93-31.5 21.22a8 8 0 0 0 15 5.56C193.74 92.73 201 88 208 88a16 16 0 0 1 0 32H32a8 8 0 0 0 0 16h176a32 32 0 0 0 0-64"/></svg>
+                </div>
+                <span class="content">
+                    <span> <span id="windSpeed">32</span> km/h</span>
+                    <span class="desc" style="display: block; " >Wind Speed</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

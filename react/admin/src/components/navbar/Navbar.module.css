@@ -1,0 +1,14 @@
+.navbar {
+    padding:1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray1);
+}
+.logo{
+    width: 120px;
+    height: 50px;
+}
+.profile{
+    width: 50px;
+    height: 50px;
+}

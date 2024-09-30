@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #fff;
+  --secondColor: #9ed61a;
+  --thirdColor: #21251f;
+}
+
+.dark{
+    --primaryColor: #21251f;
+  --secondColor: #9ed61a;
+  --thirdColor: #fff;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--primaryColor);
+}
+.navbar,.main{
+    padding:1rem 2rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color:var(--secondColor);
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+
+ul li {
+  margin: 0 10px;
+  font-size: 14px;
+  position: relative;
+  padding-bottom: 5px;
+  color: var(--thirdColor);
+}
+ul li:not(:nth-child(6))::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--secondColor);
+  transition: all 0.3s;
+
+}
+ul li:hover::before{
+    width: 100%;
+}
+ul li:hover {
+  color: var(--secondColor);
+  cursor: pointer;
+}
+
+.main{
+    flex:1;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+}
+
+.infos h1{
+    font-size: 50px;
+    color: var(--thirdColor);
+}
+.infos span{
+    color: var(--secondColor);
+}
+
+.infos p{
+    font-weight: 200;
+    font-size: 14px;
+    color: var(--thirdColor);
+    margin:5px 0 1.5rem 0;
+}
+.infos button{
+    padding: 10px 20px;
+    border:none; 
+    background-color: var(--secondColor);
+    color: white;
+    cursor: pointer;
+}
+
+.media{
+    margin-top: 3rem;
+    font-size: x-large;
+}
+.media i{
+    margin:0 6px;
+    cursor: pointer;
+    color:var(--secondColor);
+}
+
+.photoBox{
+    display: flex;
+    align-items: start;
+    position: relative;
+}
+
+#man, #blob{
+    width: 920px;
+    position: absolute;
+    top:-100%;
+    
+}
+#man{
+    left:-80%;
+}
+
+#blob{
+    left:-100%;
+    
+}

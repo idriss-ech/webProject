@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NL:wght@100..400&display=swap');
+
+
+.header{
+    position: fixed;
+    top:0;
+    margin:0; 
+    padding: 2px 15px;
+    width: 100vw;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     z-index: 1000;
+}
+
+.logo{
+    font-weight: bold;
+    font-family: 'Playwrite NL', sans-serif;
+}
+
+.menu ul{
+    display: flex;
+}
+.menu li{
+    margin:0 5px;
+}
+.menu li a {
+    color: black;
+    font-weight: 400;
+}
+.connexion{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 2rem;
+}
+.login{
+    border:1px solid black;
+}
+.login:hover{
+    background-color: rgb(59, 59, 59);
+    color: white;
+}
+.signin{
+    background-color: rgb(59, 59, 59);
+    border:1px solid rgb(59, 59, 59);
+    color: white;
+
+}
+.signin:hover{
+    background-color: transparent;
+    color: black;
+
+}

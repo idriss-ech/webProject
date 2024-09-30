@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a9ec473b0b.js" crossorigin="anonymous"></script>
+    <title>Project1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="insertToDoList">
+                <input type="text" id="toDoListTitle" placeholder="add to do list" required>
+            </div>
+            <div class="addToDoList">
+                <button class="btn" onclick="addToDoList()">Add</button>
+            </div>
+        </div>
+        <div class="body" id="boxs">
+            <div class="toDoList">
+                <div class="title">
+                    <span class="toDoTitle">todolist</span>
+                </div>
+                <div class="control">
+                    <button class="btn toDoListRemove">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

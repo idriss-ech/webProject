@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="flex justify-center items-center w-screen h-screen" >
+    <div class="container overflow-hidden relative py-8 bg-slate-200 mx-2">
+        <div class="content flex absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-slate-300 w-full transition duration-500 ease-in">
+            <div class="item w-full min-w-full">
+                <h1 class="text-center font-bold">Item1</h1>
+            </div>
+            <div class="item w-full min-w-full">
+                <h1 class="text-center font-bold">Item2</h1>
+            </div>
+            <div class="item w-full min-w-full">
+                <h1 class="text-center font-bold">Item3</h1>
+            </div>
+            <div class="item w-full min-w-full">
+                <h1 class="text-center font-bold">Item4</h1>
+            </div>
+        </div>
+        <button id="next" class="bg-slate-600 text-white px-2 py-1 rounded-lg absolute right-2 top-1/2 transform -translate-y-1/2">next</button>
+        <button id="prev" class="bg-slate-600 text-white px-2 py-1 rounded-lg absolute left-2 top-1/2 transform -translate-y-1/2">prev</button>
+    </div>
+
+    <script >
+        const items = document.querySelector('.content')
+        const itemsCount = document.querySelectorAll('.item').length
+        const itemWidth = 500
+        let index = 0 ; 
+
+        document.getElementById('prev').addEventListener('click',()=>{
+            if(index>0){
+                index = index-1;
+                items.style.transform = `translateX(-${itemWidth*index}px)`
+            }
+        document.getElementById('next').addEventListener('click', ()=>{
+            if(index<itemsCount-1){
+                index++;
+                items.style.transform = `translateX(${itemWidth*index}px)`
+            }
+        })
+        })
+    </script>
+</body>
+</html>

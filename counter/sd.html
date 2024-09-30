@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    button{
+      background-color: white;
+      border:none; 
+      padding:12px 24px;
+      width: 200px;
+      height: 50px;
+      font-size: 20px;
+      position: relative;
+      transition: all 0.6s;
+      cursor:pointer;
+    
+
+    }
+    .span1{
+      top:0; 
+      right: 0;
+      width: 0%;
+      height: 2px;
+      background-color: rgb(255, 68, 68);
+      cursor: pointer;
+      position: absolute;
+    }
+    .span2{
+      bottom:0; 
+      right: 0;
+      width: 2px;
+      height: 0%;
+      background-color: rgb(255, 68, 68);
+      cursor: pointer;
+      position: absolute;
+    }
+    .span3{
+      bottom:0; 
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: rgb(255, 68, 68);
+      cursor: pointer;
+      position: absolute;
+    }
+    .span4{
+      top:0; 
+      left: 0;
+      height: 0%;
+      width:2px;
+      background-color: rgb(255, 68, 68);
+      cursor: pointer;
+      position: absolute;
+    }
+    button span{
+      transition: all 0.6s;
+    }
+   
+    button:hover :where(.span1,  .span3){
+      width: 100%;;
+    }
+    button:hover :where(.span2, .span4){
+      height: 100%;
+    }
+    button:hover{
+      transform: scale(1.03);
+      box-shadow: 12px 12px 12px rgba(0,0,0,0.1) ,
+      -10px -10px 10px white;
+      
+    }
+  </style>
+</head>
+<body>
+  <button>Submit
+    <span class="span1"></span>
+    <span class="span2"></span>
+    <span class="span3"></span>
+    <span class="span4"></span>
+  </button>
+</body>
+</html>

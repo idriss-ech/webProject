@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a9ec473b0b.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+
+</head>
+<html>
+<body>
+   <div class="container container1 header">
+        <div class="menu">
+            <div class="logo">
+                <span>StoriStore</span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Service</a>
+                    </li>
+                    <li>
+                        <a href="">About us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="connexion">
+                <button class="btn login">Log in</button>
+                <button class="btn signup">Sign up</button>
+                <button class="darkmode" onclick="changeMode()"><i class="fa-solid fa-circle-half-stroke fa-2xl"></i></button>
+            </div>
+            <button class="dropdown dropdownBtn"  onclick="dropDown();"><i class="fa-solid fa-bars fa-xl dark"></i></button>
+            
+                <div class="content" id="dropDownContent">
+                    <ul>
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="">Service</a>
+                        </li>
+                        <li>
+                            <a href="">About us</a>
+                        </li>
+                    </ul>
+                    <button class="btn menuBtn">Log in</button><br>
+                    <button class="btn menuBtn">Sign up</button><br>
+                    <button class="darkmode" onclick="changeMode()"><i class="fa-solid fa-circle-half-stroke fa-xl"></i></button>
+
+                </div>
+         </div>
+        
+       <div class="intro container">
+             <div class="para">
+                <h1>Welcome to <span>StoriStore</span></h1>
+                <p>Your one-stop shop for the best products at unbeatable prices. We are dedicated to providing you with a wide selection of high-quality items, from the latest electronics to trendy fashion pieces, all in one convenient place.</p>
+                <button class="btn signup">Get Started</button>
+             </div>
+             <div class="photo">
+                <div class="background">
+                    <div class="test"></div>
+                    <img src="head.png" alt="headphone">
+                </div>
+             </div>
+       </div>
+    </div>
+   <div class="container body">
+        <h1>Discover Our Products</h1>
+        <p>At StoriStore, we pride ourselves on offering a wide variety of high-quality products to meet all your needs. From the latest tech gadgets and stylish apparel to unique home décor and beauty essentials, you'll find everything you're looking for in one place. Our curated collections are designed to inspire and delight, ensuring that you always find something special. Explore our categories and discover new favorites today!</p>
+        <div class="boxs">
+            <div class="box">
+                <div class="boxImage">
+                    <img src="images/phones-switch-apps.webp" alt="">
+                </div>
+                <div class="boxFooter">
+                    <h3>Casque</h3>
+                    <span>20$</span>
+                    <br>
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxImage">
+                    <img src="images/mp.webp" alt="">
+                </div>
+                <div class="boxFooter">
+                    <h3>Casque</h3>
+                    <span>20$</span>
+                    <br>
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxImage">
+                    <img src="images/playStation.jpg" alt="">
+                </div>
+                <div class="boxFooter">
+                    <h3>Casque</h3>
+                    <span>20$</span>
+                    <br>
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxImage">
+                    <img src="images/n-africa-fhd-t5300-ua40t5300auxmv-frontblack-237364219.avif" alt="">
+                </div>
+                <div class="boxFooter">
+                    <h3>Casque</h3>
+                    <span>20$</span>
+                    <br>
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxImage">
+                    <img src="images/macbook.jpeg" alt="">
+                </div>
+                <div class="boxFooter">
+                    <h3>Casque</h3>
+                    <span>20$</span>
+                    <br>
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxImage">
+                    <img src="images/Samsung-970-EVO-Plus-M.2-PCIe-NVMe-1TB_800x.webp" alt="">
+                </div>
+                <div class="boxFooter">
+                    <h3>Casque</h3>
+                    <span>20$</span>
+                    <br>
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxImage">
+                    <img src="images/maxresdefault.jpg" alt="">
+                </div>
+                <div class="boxFooter">
+                    <h3>Casque</h3>
+                    <span>20$</span>
+                    <br>
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxImage">
+                    <img src="images/casque.webp" alt="">
+                </div>
+                <div class="boxFooter">
+                    <h3>Casque</h3>
+                    <span>20$</span>
+                    <br>
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            </div>
+        <button class="btn morebtn">More...</button>
+   </div>
+  
+   <footer class="container">
+    <div class="firstLayer">
+        <div class="logo"><span>Storistore</span></div>
+        <div class="links">
+            <ul>
+                <li>
+                    <a href="">Designers</a>
+                </li>
+                <li>
+                    <a href="">Talent</a>
+                </li>
+                <li>
+                    <a href="">Inspiration</a>
+                </li>
+                <li>
+                    <a href="">Advertising</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Careers</a>
+                </li>
+                <li>
+                    <a href="">Support</a>
+                </li>
+            </ul>
+        </div>
+        <div class="socialMedia">
+            <i class="fa-brands fa-twitter fa-xl"></i>
+            <i class="fa-brands fa-facebook fa-xl"></i>
+            <i class="fa-brands fa-instagram fa-xl"></i>
+            <i class="fa-brands fa-pinterest fa-xl"></i>
+        </div>
+    </div>
+    <div class="secondLayer">
+        <div class="about">
+            <ul>
+                &copy; 2024 StoriStore
+            </ul>
+            
+            <ul>
+               
+                <li>
+                    <a href="">Terms</a>
+                </li>
+                <li>
+                    <a href="">Privacy</a>
+                </li>
+                <li>
+                    <a href="">Cookies</a>
+                </li>
+            </ul>
+        </div>
+        <div class="terms">
+            <ul>
+                <li>
+                    <a href="">Jobs</a>
+                </li>
+                <li>
+                    <a href="">Designers</a>
+                </li>
+                <li>
+                    <a href="">Freelancers</a>
+                </li>
+                <li>
+                    <a href="">Tags</a>
+                </li>
+                <li>
+                    <a href="">Places</a>
+                </li>
+                <li>
+                    <a href="">Resources</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+   <script src="script.js"></script>
+</body>
+</html>
+

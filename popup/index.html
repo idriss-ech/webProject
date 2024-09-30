@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a9ec473b0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Pop Up</title>
+  </head>
+  <body>
+    <button class="btn1" onclick="clickHere()">Click Here</button>
+    <div class="popup" id="popUP">
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>              
+        </div>
+        <div class="content">
+            <h1>Thank You!</h1>
+            <p>Your detals has been successfully <br> submitted, Thanks!</p>
+        </div>
+        
+        <button class="btn2" onclick="cancelPopUp()">Ok</button>
+    </div>
+
+    <script>
+        const popup = document.getElementById('popUP');
+        function clickHere(){
+            popup.style.display = 'block'
+        }
+        function cancelPopUp(){
+            popup.style.display = 'none'
+        }
+    </script>
+  </body>
+</html>

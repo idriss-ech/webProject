@@ -1,0 +1,28 @@
+<div class="login">
+   <h1>Welcome to Profile</h1>
+   <p>Enter your credentials to continue</p>
+   <form (ngSubmit)="logIn();">
+    <div class="inputData">
+        <input type="text" id="username" name="username" placeholder="john@example.com" required [(ngModel)]="auth.email">
+        <span><i class="fa-solid fa-user"></i></span>
+    </div>
+    <div class="inputData">
+        <input type="password" id="password" name="password" placeholder="password"  autocomplete="current-password" required [(ngModel)]="auth.password" minlength="8">
+        <span><i class="fa-solid fa-lock"></i></span>
+    </div>
+    <div class="forgetpw">
+        <a href="#">forget password</a>
+    </div>
+     <input type="submit" class="btn" value="Log in">
+   </form>
+
+   <div class="signin">
+          <span class="title">Or Sign in With</span>
+          <div class="socialMedia">
+                <a href="#" class="google"><i class="fa-brands fa-google fa-xl"></i></a>
+                <a href="#" class="facebook"><i class="fa-brands fa-facebook fa-xl"></i></a>
+          </div>
+          <span>Don't Have an Account ? <a routerLink="/signin" class="title">Sign up</a></span>
+   </div>
+
+</div>

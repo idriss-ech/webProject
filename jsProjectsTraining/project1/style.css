@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin:0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, rgb(205, 128, 253), rgb(132, 49, 170));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.head,.body{
+    width: 490px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.insertToDoList input{
+    width: 340px;
+    padding:10px 20px;
+    border-radius: 5px;
+    border:none;
+    outline: 1px solid rgb(171, 95, 253);
+
+}
+.insertToDoList input:hover{
+    outline: 1px solid rgb(156, 64, 254);
+}
+.btn{
+    border-radius: 5px;
+    background-color:rgb(171, 95, 253) ;
+    color: white;
+    border:1.4px solid rgb(171, 95, 253);
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color: rgb(148, 53, 250);
+    cursor: pointer;
+}
+.addToDoList button{
+    width: 100px;
+    padding: 10px 20px;
+}
+
+
+
+.body{
+    background-color: white;
+    flex-direction: column;
+}
+
+.toDoList{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    padding:10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    border-bottom-left-radius:0 ;
+    border-bottom-right-radius:0 ;
+    border-bottom:1.3px solid rgb(187, 124, 255);
+    margin:5px;
+
+}
+.toDoList:hover{
+   transform: scale(1.01);
+   cursor: pointer;
+  
+}
+
+.title span{
+    font-weight:400;
+    text-align: left;
+}
+.control button{
+    width: 35px;
+    height: 35px;
+    padding:5px;
+}

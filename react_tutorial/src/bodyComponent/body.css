@@ -1,0 +1,186 @@
+:root{
+    --yellow : rgb(241, 195, 29); 
+    --gray : rgb(135, 135, 135);
+    --black: #101318;
+    --semiblack : #101318d0;
+    --white : #f6f6f6;
+  }
+  
+  .body{
+      padding-top: 5rem;
+  }
+  .home{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5rem;
+  }
+  
+  .leftside{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+  }
+  .title{
+      margin-bottom: 0;
+      color:#101418;
+      font-weight: 600;
+  }
+  .leftside .joinUs{
+      width: 250px;
+      background-color: var(--yellow);
+      font-size: 20px;
+      font-weight: 700;
+      transition:0.3s ease-in ;
+  }
+  .joinUs:hover{
+      background-color: #101418;
+      color: white;
+  }
+  .leftside .ourLogo{
+      color:var(--yellow);
+  }
+  .description{
+      color:var(--gray);
+  }
+  
+  .righside{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+  }
+  .righside .photo{
+      width: 300px;
+  }
+  
+  .products{
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .products p{
+      text-align: center;
+  }
+  .products .boxs{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .products .box{
+      border:1px solid var(--semiblack);
+      margin: 10px 10px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      transition: 0.3s ease-in-out;
+  }
+  .products .box:hover{
+      cursor: pointer;
+    transform: scale(1.01);
+    border:1.5px solid var(--yellow);
+  }
+  .products .box:hover .buy{
+   background-color: var(--yellow);
+   color: var(--semiblack);
+  }
+  .products .box:hover .buy:hover{
+   background-color: var(--semiblack);
+   color: var(--white);
+  }
+  
+  .box .productImg,img{
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+  
+  }
+  .box .productDesc {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .productTitle{
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: capitalize;
+  }
+  .productDesc .buy{
+      width: 190px;
+      margin-top: 0;
+      margin-bottom: 5px;
+      background-color: var(--semiblack);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+  }
+  .productDesc .buy:hover{
+      cursor: pointer;
+      background-color: var(--black);
+  }
+  .aboutus{
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      
+  }
+  .services{
+      display: flex;
+      flex-wrap:wrap ;
+      justify-content: center;
+      margin-top: 1rem;
+  }
+  
+  
+  .aboutus .service{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      transition: 0.3s ease-out;
+      border-radius: 10px;
+      padding:8px 16px;
+      margin: 7px;
+  }
+  .aboutus .service:hover{
+      border:1px solid var(--yellow);
+      box-shadow: 1px 2px 8px var(--yellow);
+  }
+  .service span{
+      text-align: center;
+      font-weight: 500;
+  }
+  .service p { 
+      text-align: center;
+      font-size: 12px;
+  }
+  .service img{
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+  }
+  @media (max-width:700px){
+      .home{
+          flex-direction: column-reverse;
+      }
+      .leftside{
+          align-items: center;
+      }
+      .leftside .description{
+          text-align: justify;
+      }
+  }

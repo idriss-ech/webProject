@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+    --height:200px;
+    --width:300px;
+    --delay: 30s;
+    --items: 8;
+}
+.container {
+  width: 70%;
+  max-width: calc(var(--width) * var(--items));
+  height: var(--height);
+  margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
+  margin-inline: auto;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+.item , .box{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+
+}
+.item {
+  background: #b91a1a;
+  left: max(calc(var(--width) * var(--items)), 100%);
+  animation: scroll var(--delay) linear infinite;
+}
+.box {
+  background: #1ab9a4;
+  right:  max(calc(var(--width) * var(--items)), 100%);
+  animation: scrollR var(--delay) linear infinite;
+}
+
+.item1 {
+  animation-delay: calc(var(--delay) / var(--items) * (var(--items) - 1) * -1);
+}
+.item2 {
+  animation-delay: calc(var(--delay) / var(--items) * (var(--items) - 2) * -1);
+}
+.item3 {
+  animation-delay: calc(var(--delay) / var(--items) * (var(--items) - 3) * -1);
+}
+.item4 {
+  animation-delay: calc(var(--delay) / var(--items) * (var(--items) - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(var(--delay) / var(--items) * (var(--items) - 5) * -1);
+}
+.item6 {
+  animation-delay: calc(var(--delay) / var(--items) * (var(--items) - 6) * -1);
+}
+.item7 {
+  animation-delay: calc(var(--delay) / var(--items) * (var(--items) - 7) * -1);
+}
+.item8 {
+  animation-delay: calc(var(--delay) / var(--items) * (var(--items) - 8) * -1);
+}
+
+@keyframes scroll {
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+@keyframes scrollR {
+  to {
+    right: calc(var(--width) * -1);
+  }
+}
